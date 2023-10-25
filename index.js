@@ -14,7 +14,7 @@ const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     database: 'Passward',
-    password:"Gana!k1234"
+    password:"G1234"
   });
 
   let createRandomUser =  function(){
