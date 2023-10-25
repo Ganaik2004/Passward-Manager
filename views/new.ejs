@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- GOOGLE FONT LINK -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+         rel="stylesheet">
+         <!-- Googlr icon link -->
+         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+     <!-- Box icon link -->
+     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+     <!-- FONT AUSOME LINK -->
+     <script src="https://kit.fontawesome.com/659a986349.js" crossorigin="anonymous"></script>
+     <!-- CSS LINK -->
+   <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #080808;
+    --bg-2: #262626;
+    --color: #fff;
+    --main-color: #24cbd7   ;
+    --color-2: #c8c8c8;
+    --h1-font: 2.5rem;
+    --p-font: .9rem;
+}
+body {
+    background-color: var(--bg-color);
+    color: var(--color);
+    overflow-x: hidden;
+}
+body.dark {
+    --bg-color: #fff;
+    --color: #080808;
+    --main-color: rgb(36, 203, 215);
+    --color-2: #616161;
+    --bg-2: #f6f6f6;
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    color: var(--main-color);
+}
+button{
+    padding: 9px 18px;
+    font-size: 1.1rem;
+    background-color: transparent;
+    border: 2px solid var(--main-color);
+    font-weight: 600;
+    color: var(--main-color);
+    border-radius: 20px;
+    transition:all .5s ease;
+    margin-top: 40px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+input{
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+   width: 100%;
+   height: 50px;
+   background-color: var(--bg-2);
+   padding: 10px;
+   border-radius: 10px;
+   color: var(--main-color);
+}
+.div{
+position: relative;
+width: 100%;
+    }
+.eye-area{
+        position: absolute;
+        top: 25px;
+        right: 30px;
+    }
+    .eye-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    i{
+        font-size: 20px;
+        position: absolute;
+        color:var(--main-color);
+        cursor: pointer;
+    }
+    #eye,#eye-2{
+        opacity: 1;
+    }
+    #eye-slash,#eye-slash-2{
+        opacity: 0;
+    }
+   
+   </style>
+</head>
+<body>
+   <div class="container">
+    <h1>ADD PASSWORD</h1>
+    <form action="/manager/add" method="post">
+        <input type="text" name="username" placeholder="Enter username">
+        <input type="email" name="email" placeholder="Enter Email">
+        <div class="div">
+            <input type="password" name="password" placeholder="Enter password" id="logpassward">
+       
+        </div>
+        
+        <button>Submit</button>
+    </form>
+   </div>
+   <script>
+     function myLogpassward(){
+            var a = document.getElementById("logpassward");
+            var b = document.getElementById("eye");
+            var c = document.getElementById("eye-slash");
+
+            if(a.type==="password"){
+                a.type = "text";
+                b.style.opacity = "0";
+                c.style.opacity = "1";
+            }else{
+                a.type = "password";
+                b.style.opacity = "1";
+                c.style.opacity = "0";
+            }
+        }
+   </script>
+</body>
+</html>
